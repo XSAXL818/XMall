@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddressManagerActivity"
+    android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/grey"
+        >
+        <Button
+            android:id="@+id/addr_manager_back_button"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/baseline_arrow_back_24"
+            android:enabled="false"
+            >
+        </Button>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="@style/bold_20_black"
+            android:text="我的收货地址"
+            android:layout_marginLeft="10dp"
+            android:gravity="left|center_vertical"
+            >
+
+        </TextView>
+
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/addr_manager_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="9"
+        >
+    </androidx.recyclerview.widget.RecyclerView>
+    <Button
+        android:id="@+id/addr_manager_add_button"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="+添加收货地址"
+        android:background="@drawable/new_button"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        ></Button>
+
+</LinearLayout>

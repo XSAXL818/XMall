@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/grey"
+    android:layout_height="match_parent"
+    >
+    <LinearLayout
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="0dp"
+        android:background="@drawable/store_shape"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_weight="10"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/store_name"
+                android:text="店名"
+                android:layout_marginLeft="10dp"
+                android:gravity="center|left"
+                style="@style/bold_20_black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#112233"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/store_goods"
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="10"
+            >
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <LinearLayout
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="30dp"
+            android:background="@color/white">
+            <Button
+                android:id="@+id/store_btn1"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:text="查看物流"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:textSize="20dp">
+            </Button>
+            <Button
+                android:id="@+id/store_btn2"
+                android:text="评价"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:textSize="20dp">
+            </Button>
+            <Button
+                android:id="@+id/store_btn3"
+                android:text="加入购物车"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:textSize="20dp">
+            </Button>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="#DDCFDB"
+    android:layout_height="match_parent"
+
+    >
+    <LinearLayout
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <CheckBox
+                style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+                android:id="@+id/checkbox0"
+                android:layout_width="50dp"
+                android:layout_height="50dp" />
+            <TextView
+                android:id="@+id/tv_name"
+                android:text="店名"
+                android:gravity="center|left"
+                style="@style/bold_20_black"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#112233"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/list_items"
+            android:layout_marginLeft="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </androidx.recyclerview.widget.RecyclerView>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="#113322"/>
+    </LinearLayout>
+
+</LinearLayout>

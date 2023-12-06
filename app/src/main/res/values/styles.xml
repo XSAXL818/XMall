@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    // 加粗,20dp,黑体
+    <style name="bold_20_black">
+        <item name="android:textSize">20dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+    // 红色,加粗,25dp
+    <style name="bold_25_red">
+        <item name="android:textSize">25dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">#FF0000</item>
+    </style>
+
+    //实现圆形的CheckBox
+
+
+</resources>

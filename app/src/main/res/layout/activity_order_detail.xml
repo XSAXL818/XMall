@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/grey"
+    tools:context=".OrderDetailActivity">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="7"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:background="@drawable/order_item_shape"
+        >
+        <TextView
+            android:layout_marginLeft="10dp"
+            android:id="@+id/order_detail_store"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="店铺"
+            android:gravity="center|left"
+            style="@style/bold_20_black"
+            >
+
+        </TextView>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/order_detail_recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="7"
+            >
+        </androidx.recyclerview.widget.RecyclerView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        android:layout_weight="5"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:gravity="center|left"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:text="实付款"
+                style="@style/bold_20_black"
+                >
+            </TextView>
+
+            <TextView
+                android:id="@+id/order_detail_money"
+                android:layout_width="match_parent"
+                style="@style/bold_25_red"
+                android:layout_height="match_parent"
+                android:text="元"
+                android:gravity="center|right"
+                >
+            </TextView>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:gravity="left"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:text="收货信息"
+                style="@style/bold_20_black"
+                >
+            </TextView>
+
+            <TextView
+                android:id="@+id/order_detail_address"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="收货地址"
+                android:textColor="#6C6666"
+                android:gravity="right"
+                >
+            </TextView>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:gravity="left|center"
+                android:layout_width="100dp"
+                android:layout_height="match_parent"
+                android:text="订单号"
+                style="@style/bold_20_black"
+                >
+            </TextView>
+
+            <TextView
+                android:id="@+id/order_detail_id"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="1111"
+                android:textColor="#6C6666"
+                android:gravity="center"
+                >
+            </TextView>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

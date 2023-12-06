@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".UI.BlankFragment3"
+    android:background="@color/grey">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/tv_frag3"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:textSize="18dp"
+        android:gravity="center"
+        android:text="3" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:orientation="horizontal"
+        android:background="@color/white"
+        >
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@mipmap/laoshu"
+            />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:textSize="18dp"
+            android:gravity="left|center"
+            android:text="TextView" />
+
+        <ImageButton
+            android:id="@+id/imageButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:textDirection="anyRtl"
+            android:text="设置"
+            android:gravity="bottom|center"
+            android:src="@mipmap/settings"
+            android:background="@color/white"/>
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/white">
+        <TextView
+            android:layout_marginTop="10dp"
+            android:id="@+id/tv_info"
+            android:textSize="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </TextView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_weight="2"
+                android:text="我的订单>"
+                android:textSize="25dp"
+                android:textStyle="bold"
+                >
+            </TextView>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_weight="3"
+                android:layout_height="match_parent"
+                android:text="全部"
+                android:gravity="right|center"
+                >
+
+            </TextView>
+            <Button
+                android:id="@+id/order_button6"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent"
+                android:background="@drawable/baseline_reorder_24"
+                >
+            </Button>
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:orientation="horizontal"
+            android:background="@color/white"
+            >
+            <Button
+                android:id="@+id/order_button1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/baseline_payment_24"
+                >
+            </Button>
+            <Button
+                android:id="@+id/order_button2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/baseline_pages_24"
+                >
+            </Button>
+            <Button
+                android:id="@+id/order_button3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/baseline_airport_shuttle_24"
+                >
+            </Button>
+            <Button
+                android:id="@+id/order_button4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/baseline_recommend_24"
+                >
+            </Button>
+            <Button
+                android:id="@+id/order_button5"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/baseline_attach_money_24"
+                >
+            </Button>
+
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="待付款"
+                android:textSize="16dp"
+                android:gravity="top|center"
+                android:textStyle="bold"
+                >
+            </TextView>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="待发货"
+                android:textSize="16dp"
+                android:gravity="top|center"
+                android:textStyle="bold"
+                >
+            </TextView>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="待收货"
+                android:textSize="16dp"
+                android:gravity="top|center"
+                android:textStyle="bold"
+                >
+            </TextView>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="待评价"
+                android:textSize="16dp"
+                android:gravity="top|center"
+                android:textStyle="bold"
+                >
+            </TextView>
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="退款/售后"
+                android:textSize="16dp"
+                android:gravity="top|center"
+                android:textStyle="bold"
+                >
+            </TextView>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>

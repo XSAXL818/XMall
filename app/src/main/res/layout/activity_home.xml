@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <FrameLayout
+        android:id="@+id/frameLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="#E1E1E1">
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:layout_weight="12">
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            >
+            <RadioButton
+                android:id="@+id/button1"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/radio_frag1_selector"
+                android:scaleX="0.5"
+                android:scaleY="0.8"
+                android:button="@null"
+                android:layout_weight="1">
+
+            </RadioButton>
+            <RadioButton
+                android:id="@+id/button2"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/radio_frag2_selector"
+                android:scaleX="0.5"
+                android:scaleY="0.8"
+                android:button="@null"
+                android:layout_weight="1">
+
+            </RadioButton>
+            <RadioButton
+                android:id="@+id/button3"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/radio_frag3_selector"
+                android:scaleX="0.5"
+                android:scaleY="0.8"
+                android:button="@null"
+                android:layout_weight="1">
+
+            </RadioButton>
+
+
+        </RadioGroup>
+
+
+<!--        <Button-->
+<!--            android:textColor="@color/black"-->
+<!--            android:id="@+id/button1"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="首页"-->
+<!--            android:background="@color/white"-->
+<!--            android:layout_height="match_parent">-->
+<!--        </Button>-->
+<!--        <Button-->
+<!--            android:textColor="@color/black"-->
+<!--            android:id="@+id/button2"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_weight="1"-->
+<!--            android:text="购物车"-->
+<!--            android:background="@color/white"-->
+<!--            >-->
+<!--        </Button>-->
+<!--        <Button-->
+<!--            android:textColor="@color/black"-->
+<!--            android:id="@+id/button3"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:text="我的"-->
+<!--            android:layout_weight="1"-->
+<!--            android:background="@color/white"-->
+<!--            >-->
+<!--        </Button>-->
+
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

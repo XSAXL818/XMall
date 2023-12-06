@@ -1,0 +1,12 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+<!--    <style name="Base.Theme.XNotePlus" parent="Theme.Material3.DayNight.NoActionBar">-->
+<!--        &lt;!&ndash; Customize your light theme here. &ndash;&gt;-->
+<!--         <item name="colorPrimary">#D36A6A</item>-->
+
+
+<!--    </style>-->
+
+<!--    <style name="Theme.XNotePlus" parent="Base.Theme.XNotePlus" />-->
+    <style name="Theme.XNotePlus" parent="Theme.MaterialComponents.DayNight.DarkActionBar.Bridge" />
+</resources>

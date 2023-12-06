@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Test.UserTestActivity">
+
+    <EditText
+        android:id="@+id/user_test_acc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="34dp"
+        android:ems="10"
+        android:hint="acc"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/user_test_passwd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="2dp"
+        android:ems="10"
+        android:hint="passwd"
+        android:inputType="text"
+        app:layout_constraintEnd_toEndOf="@+id/user_test_acc"
+        app:layout_constraintTop_toBottomOf="@+id/user_test_acc" />
+
+    <Button
+        android:id="@+id/user_test_insert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="68dp"
+        android:layout_marginTop="69dp"
+        android:text="insert"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_test_passwd" />
+
+    <Button
+        android:id="@+id/user_test_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="59dp"
+        android:layout_marginBottom="33dp"
+        android:text="delete"
+        app:layout_constraintBottom_toTopOf="@+id/user_test_query"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/user_test_update"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:text="update"
+        app:layout_constraintStart_toStartOf="@+id/user_test_insert"
+        app:layout_constraintTop_toBottomOf="@+id/user_test_insert" />
+
+    <Button
+        android:id="@+id/user_test_query"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:text="query"
+        app:layout_constraintBottom_toTopOf="@+id/textView4"
+        app:layout_constraintStart_toStartOf="@+id/user_test_delete" />
+
+    <TextView
+        android:id="@+id/user_test_ret"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="36dp"
+        android:text="all users: "
+        android:textSize="18dp"
+        app:layout_constraintEnd_toStartOf="@+id/user_test_query"
+        app:layout_constraintTop_toBottomOf="@+id/user_test_update" />
+</androidx.constraintlayout.widget.ConstraintLayout>

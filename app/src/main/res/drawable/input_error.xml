@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- 设置边框 -->
+    <stroke
+        android:width="3dp"
+        android:color="#DA4C4C" />
+    <!-- 设置四个角的弧度 -->
+    <corners android:radius="5dp" />
+
+</shape>

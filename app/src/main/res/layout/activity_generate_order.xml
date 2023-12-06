@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".GenerateOrderActivity">
+
+    <Button
+        android:id="@+id/generate_order_back"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:background="@drawable/baseline_arrow_back_24"
+        >
+    </Button>
+
+<!--    <androidx.recyclerview.widget.RecyclerView-->
+<!--        android:id="@+id/generate_order_addr"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="120dp"-->
+<!--        android:background="#112233"-->
+<!--        >-->
+
+<!--    </androidx.recyclerview.widget.RecyclerView>-->
+    <TextView
+        android:id="@+id/generate_order_addr"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        style="@style/bold_20_black"
+        >
+
+    </TextView>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/generate_order_store"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:background="@color/grey"
+        >
+    </androidx.recyclerview.widget.RecyclerView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:id="@+id/generate_order_price"
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:text="价格"
+            style="@style/bold_25_red"
+            >
+        </TextView>
+
+        <Button
+            android:id="@+id/generate_order_pay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="支付订单"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:background="@drawable/new_button2"
+            />
+    </LinearLayout>
+
+</LinearLayout>

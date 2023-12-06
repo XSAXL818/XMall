@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".UI.BlankFragment1">
+
+    <LinearLayout
+        android:id="@+id/frag1_search"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/grey"
+        android:paddingTop="5dp"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        >
+        <TextView
+            android:id="@+id/frag1_et"
+            android:layout_width="300dp"
+            android:layout_height="match_parent"
+            android:inputType="text"
+            android:gravity="center"
+            android:hint="点击搜索商品"
+            android:textSelectHandle="@null"
+            android:clickable="true"
+            android:background="@drawable/edittext_selector"
+            >
+        </TextView>
+        <Button
+            android:id="@+id/frag1_button"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:layout_height="match_parent"
+            android:text="搜索"
+            android:background="@drawable/new_button"
+            android:textSize="15dp"
+            >
+
+
+        </Button>
+    </LinearLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/frag1_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+    </androidx.recyclerview.widget.RecyclerView>
+
+</LinearLayout>

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/login_img"
+        android:layout_width="0dp"
+        android:layout_height="180dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@mipmap/laoshu" />
+
+    <TextView
+        android:id="@+id/text_acc"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:gravity="center|center_vertical"
+        android:text="账号："
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/input_acc"
+        app:layout_constraintEnd_toStartOf="@+id/input_acc"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/input_acc" />
+
+    <TextView
+        android:id="@+id/text_passwd"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="16dp"
+        android:gravity="center|center_vertical"
+        android:text="密码："
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/input_passwd"
+        app:layout_constraintEnd_toStartOf="@+id/input_passwd"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/input_passwd" />
+
+
+    <EditText
+        android:id="@+id/input_passwd"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="51dp"
+        android:background="@drawable/edittext_selector"
+        android:ems="10"
+        android:hint="请输入密码"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/remember"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/text_passwd" />
+
+    <EditText
+        android:id="@+id/input_acc"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="38dp"
+        android:background="@drawable/edittext_selector"
+        android:ems="10"
+        android:hint="请输入手机号"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/text_passwd"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/text_acc"
+        app:layout_constraintTop_toBottomOf="@+id/login_img" />
+
+    <Button
+        android:id="@+id/login_ensure"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginStart="67dp"
+        android:layout_marginTop="105dp"
+        android:text="登录"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/remember" />
+
+    <Button
+        android:id="@+id/login_cancel"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="62dp"
+        android:text="取消"
+        app:layout_constraintBottom_toBottomOf="@+id/login_ensure"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/login_ensure" />
+
+    <CheckBox
+        android:id="@+id/remember"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="27dp"
+        android:layout_marginEnd="56dp"
+        android:text="记住密码"
+        android:textSize="20dp"
+        app:layout_constraintBaseline_toBaselineOf="@+id/auto_login"
+        app:layout_constraintEnd_toStartOf="@+id/auto_login"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <CheckBox
+        android:id="@+id/auto_login"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="281dp"
+        android:text="自动登录"
+        android:textSize="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/remember" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

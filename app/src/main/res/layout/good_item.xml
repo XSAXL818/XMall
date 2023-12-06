@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:paddingBottom="30dp"
+    android:layout_height="250dp">
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:layout_gravity="center"
+        app:round="10dp"
+        android:scaleType="centerCrop"
+        android:id="@+id/good_image"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/maomi"
+        >
+    </androidx.constraintlayout.utils.widget.ImageFilterView>
+
+    <LinearLayout
+        android:id="@+id/check_info"
+        android:clickable="true"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/good_name"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="商品名......"
+            style="@style/bold_20_black"
+            >
+        </TextView>
+        <TextView
+            android:id="@+id/good_sku"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:text="sku属性：尺码"
+            android:textColor="#8C8787"
+            >
+        </TextView>
+        <TextView
+            android:id="@+id/good_price"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="价格"
+            style="@style/bold_25_red"
+            >
+        </TextView>
+
+
+    </LinearLayout>
+
+</LinearLayout>

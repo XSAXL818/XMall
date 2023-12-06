@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:paddingBottom="30dp"
+    android:layout_height="250dp">
+
+    <CheckBox
+        style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+        android:layout_gravity="center"
+        android:id="@+id/checkbox1"
+        android:layout_width="30dp"
+        android:layout_height="30dp" />
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:layout_gravity="center"
+        app:round="10dp"
+        android:scaleType="centerCrop"
+        android:id="@+id/check_iv"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:background="@drawable/laoshu"
+        >
+    </androidx.constraintlayout.utils.widget.ImageFilterView>
+
+    <LinearLayout
+        android:id="@+id/check_info"
+        android:clickable="true"
+        android:layout_gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/check_name"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="商品名......"
+            style="@style/bold_20_black"
+            >
+        </TextView>
+        <TextView
+            android:id="@+id/check_sku"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="sku属性：尺码"
+            android:textColor="@color/black"
+            >
+        </TextView>
+        <TextView
+            android:id="@+id/check_price"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:text="价格"
+            style="@style/bold_25_red"
+            >
+        </TextView>
+        <TextView
+            android:gravity="center"
+            android:text="111"
+            android:id="@+id/check_num"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.5">
+
+        </TextView>
+
+
+    </LinearLayout>
+
+</LinearLayout>

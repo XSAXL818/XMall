@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+<!--    将shape_edit_focus.xml作为EditText的背景-->
+    <item android:drawable="@drawable/shape_edit_focus" android:state_focused="true" />
+<!--    没有聚焦时使用默认背景-->
+    <item android:drawable="@drawable/shape_edit_normal" />
+</selector>

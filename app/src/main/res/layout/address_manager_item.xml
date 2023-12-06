@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:orientation="vertical"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/addr_manager_item_name_image"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:text="姓"
+            style="@style/bold_20_black"
+            android:layout_gravity="center"
+            android:background="@drawable/new_button"
+            >
+        </Button>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="30dp">
+                <TextView
+                    android:id="@+id/addr_manager_item_name_phone"
+                    android:layout_width="wrap_content"
+                    android:text="姓名 手机号"
+                    android:gravity="center"
+                    style="@style/bold_20_black"
+                    android:layout_height="match_parent">
+                </TextView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="默认"
+                    android:gravity="center"
+                    android:layout_gravity="center"
+                    android:textColor="@color/orange"
+                    android:background="@drawable/tv_default"
+                    android:visibility="invisible"
+                    >
+
+                </TextView>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/addr_manager_item_address"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:text="收货地址"
+                >
+
+            </TextView>
+
+        </LinearLayout>
+        <Button
+            android:id="@+id/addr_manager_item_edit_button"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginRight="10dp"
+            android:layout_gravity="center"
+            android:background="@drawable/baseline_edit_24"
+            >
+
+        </Button>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        >
+        <CheckBox
+            android:id="@+id/addr_manager_item_set_default"
+            style="@style/Widget.AppCompat.CompoundButton.RadioButton"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center|left"
+            android:text="设为默认地址"
+            android:layout_marginLeft="10dp"
+
+            />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="删除"
+            android:layout_gravity="right"
+            >
+        </Button>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

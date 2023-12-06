@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+<!--    未点击未dir_normal-->
+    <item android:drawable="@drawable/dir_normal" android:state_pressed="true" />
+<!--    点击后dir_click-->
+<!--    <item android:drawable="@drawable/dir_click" android:state_pressed="true" />-->
+<!--    // 不点击Button时背景颜色为黑色-->
+<!--    <item android:drawable="@drawable/dir_click" />-->
+</selector>
