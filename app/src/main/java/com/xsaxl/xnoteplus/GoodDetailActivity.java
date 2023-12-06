@@ -12,7 +12,10 @@ import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
-import com.xsaxl.xnoteplus.Adapter.GoodImageAdapter;
+import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
+import com.bumptech.glide.request.RequestOptions;
+import com.xsaxl.xnoteplus.Adapter.GoodDetailImageAdapter;
 import com.xsaxl.xnoteplus.Adapter.SpuAttrAdapter;
 import com.xsaxl.xnoteplus.dao.ImageDao;
 import com.xsaxl.xnoteplus.dao.SpuAttrDao;
@@ -20,6 +23,9 @@ import com.xsaxl.xnoteplus.dao.SpuDao;
 import com.xsaxl.xnoteplus.entity.Image;
 import com.xsaxl.xnoteplus.entity.Spu;
 import com.xsaxl.xnoteplus.entity.SpuAttr;
+import com.youth.banner.Banner;
+import com.youth.banner.holder.BannerImageHolder;
+import com.youth.banner.indicator.CircleIndicator;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -49,6 +55,7 @@ public class GoodDetailActivity extends AppCompatActivity {
     private SpuDao spuDao;
 
     private SpuAttrDao spuAttrDao;
+    private Banner goodDetail_banner;
 
 
     @Override
@@ -65,7 +72,7 @@ public class GoodDetailActivity extends AppCompatActivity {
         goodDetail_userComment = findViewById(R.id.goodDetail_userComment);
         goodDetail_store = findViewById(R.id.goodDetail_store);
         goodDetail_fav = findViewById(R.id.goodDetail_fav);
-        goodDetail_viewPager = findViewById(R.id.goodDetail_viewPager);
+        goodDetail_banner = findViewById(R.id.goodDetail_banner);
 
         goodDetail_addSCart = findViewById(R.id.goodDetail_addSCart);
         goodDetail_buyGood = findViewById(R.id.goodDetail_buyGood);
@@ -89,6 +96,10 @@ public class GoodDetailActivity extends AppCompatActivity {
 //        images.add(image3);
 
 
+
+
+
+
         Bundle bundle = getIntent().getExtras();
         int spu_id = bundle.getInt("spu_id");
 //        Toast.makeText(this, "spu_id:" + spu_id, Toast.LENGTH_SHORT).show();
@@ -96,10 +107,24 @@ public class GoodDetailActivity extends AppCompatActivity {
         spu = spuDao.querySpuById(spu_id);
         images = imageDao.queryBySkuID(spu_id);
 
-        GoodImageAdapter goodImageAdapter = new GoodImageAdapter(images,this);
-        goodDetail_viewPager.setAdapter(goodImageAdapter);
+//        GoodImageAdapter goodImageAdapter = new GoodImageAdapter(images,this);
+//        goodDetail_viewPager.setAdapter(goodImageAdapter);
 
 
+        goodDetail_banner.setAdapter(new GoodDetailImageAdapter(images){
+                    @Override
+                    public void onBindView(BannerImageHolder holder, Image data, int position, int size) {
+                        //图片加载自己实现
+                        Glide.with(holder.itemView)
+                                .load(data.getImage_url())
+                                .apply(RequestOptions.bitmapTransform(new RoundedCorners(30)))
+                                .into(holder.imageView);
+                    }
+
+
+                })
+                .addBannerLifecycleObserver(this)//添加生命周期观察者
+                .setIndicator(new CircleIndicator(this));
 
 
         commentNumber = 300;
