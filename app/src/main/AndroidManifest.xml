@@ -14,12 +14,14 @@
         android:theme="@style/Theme.Design.Light.NoActionBar"
         tools:targetApi="31">
         <activity
+            android:name=".Test.BannerActivity"
+            android:exported="false" />
+        <activity
             android:name=".AddressManagerActivity"
             android:exported="true" />
         <activity
             android:name=".Util.TestActivity"
             android:exported="true" />
-
         <activity
             android:name=".GenerateOrderActivity"
             android:exported="true" />

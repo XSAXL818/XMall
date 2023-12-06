@@ -43,4 +43,6 @@ dependencies {
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     annotationProcessor("androidx.room:room-compiler:2.6.0")
     implementation("com.makeramen:roundedimageview:2.3.0")
+    implementation("com.youth.banner:banner:1.1.5")
+
 }
