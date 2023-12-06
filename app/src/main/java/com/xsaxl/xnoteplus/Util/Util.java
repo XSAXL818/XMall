@@ -2,13 +2,24 @@ package com.xsaxl.xnoteplus.Util;
 
 import android.content.Context;
 import android.content.DialogInterface;
+import android.graphics.Rect;
 import android.text.format.DateFormat;
 import android.view.Gravity;
+import android.view.View;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.xsaxl.xnoteplus.R;
+import com.xsaxl.xnoteplus.Test.AlertDialogTestActivity;
+import com.xsaxl.xnoteplus.Test.AlertDialogTestAdapter;
+import com.xsaxl.xnoteplus.entity.SpuAttr;
+
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class Util {
     public static void showToast(Context context, String msg){
@@ -19,29 +30,31 @@ public class Util {
                         toast.show();
 //        Toast.makeText(context,msg, Toast.LENGTH_SHORT).show();
     }
-    public static void showDeleteNoteDialog( Context context){
-        AlertDialog.Builder builder = new AlertDialog.Builder(context);
-        builder.setTitle("删除确认");
-        builder.setMessage("确认删除所选的1条笔记吗？");
-        builder.setPositiveButton("删除", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialog, int which) {
-                // 删除成功的Toast
-                Toast toast = Toast.makeText(context,"删除成功",Toast.LENGTH_SHORT);
-                // 弹出的Toast不要带图标
-                toast.setText("删除成功");
 
-                toast.show();
-
-            }
-        });
-        builder.setNegativeButton("取消",null);
-        builder.show();
-    }
 
     //返回一个系统当前时间
     public static String getSystemTime(){
         return DateFormat.format("yyyy-MM-dd HH:mm:ss", new Date()).toString();
+    }
+
+    // 传入SpuAttr的List，显示商品参数的对话框，同时传入上下文
+    public static void showProductParameterDialog(List<SpuAttr> data, Context context){
+
+        AlertDialog.Builder builder = new AlertDialog.Builder( context );
+
+        View view = View.inflate(context, R.layout.alert_layout,null);
+        RecyclerView recyclerView = view.findViewById(R.id.alert_recycler_view);
+
+        recyclerView = view.findViewById(R.id.alert_recycler_view);
+        recyclerView.setAdapter(new AlertDialogTestAdapter(data));
+        GridLayoutManager gridLayoutManager = new GridLayoutManager(context, 1);
+        recyclerView.setLayoutManager(gridLayoutManager);
+
+
+        builder.setView(view);
+
+        builder.setPositiveButton("确定",null);
+        builder.show();
     }
 
 }

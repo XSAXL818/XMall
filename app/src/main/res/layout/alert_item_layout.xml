@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:layout_height="82dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:id="@+id/alert_item_name"
+            style="@style/bold_20_black"
+            android:gravity="center"
+            android:text="名称"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent">
+        </TextView>
+        <TextView
+            android:id="@+id/alert_item_value"
+            android:text="值"
+            android:layout_marginLeft="30dp"
+            style="@style/bold_20_black"
+            android:gravity="center|left"
+            android:layout_width="0dp"
+            android:layout_weight="5"
+            android:layout_height="match_parent"></TextView>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/grey"></View>
+
+
+
+</LinearLayout>
