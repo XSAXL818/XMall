@@ -7,21 +7,8 @@
     tools:context=".Test.BannerActivity">
 
     <com.youth.banner.Banner
-        android:id="@+id/banner"
+        android:id="@+id/banner1"
         android:layout_width="match_parent"
-        android:layout_height="200dp"
-        app:banner_default_image="@drawable/default_image"
-        app:banner_indicator_drawable_selected="@drawable/shape_indicator_selected"
-        app:banner_indicator_drawable_unselected="@drawable/shape_indicator_unselected"
-        app:banner_indicator_gravity="center"
-        app:banner_indicator_height="6dp"
-        app:banner_indicator_margin="5dp"
-        app:banner_indicator_width="6dp"
-        app:banner_scroll_time="800"
-        app:banner_style="circle"
-        app:banner_title_background="@color/colorPrimary"
-        app:banner_title_height="30dp"
-        app:banner_title_textcolor="@color/colorAccent"
-        app:banner_title_textsize="12sp" />
+        android:layout_height="300dp" />
 
 </LinearLayout>
