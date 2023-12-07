@@ -57,6 +57,15 @@
             android:name=".Test.UserTestActivity"
             android:exported="true" />
         <activity
+            android:name=".APIActivity"
+            android:exported="true" />
+        <activity
+            android:name=".ResouActivity"
+            android:exported="true" />
+        <activity
+            android:name=".YuluActivity"
+            android:exported="true" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

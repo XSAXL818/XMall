@@ -1,7 +1,9 @@
 package com.xsaxl.xnoteplus;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.provider.MediaStore;
+import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.Toast;
@@ -28,10 +30,11 @@ public class HomeActivity extends AppCompatActivity {
     private BlankFragment1 blankFragment1;
     private BlankFragment2 blankFragment2;
     private BlankFragment3 blankFragment3;
-
+//    private BlankFragment4 blankFragment4;
     private RadioButton button1;
     private Button button2;
     private Button button3;
+    private Button button4;
 
 
     @Override
@@ -42,6 +45,7 @@ public class HomeActivity extends AppCompatActivity {
         button1 = findViewById(R.id.button1);
         button2 = findViewById(R.id.button2);
         button3 = findViewById(R.id.button3);
+        button4 = findViewById(R.id.button4);
 
         button1.setChecked(true);
 
@@ -89,7 +93,13 @@ public class HomeActivity extends AppCompatActivity {
             replaceFragment(blankFragment3);
         });
 
-
+        button4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(HomeActivity.this, APIActivity.class);
+                startActivity(intent);
+            }
+        });
 
 
 
