@@ -36,11 +36,12 @@
             android:layout_marginLeft="10dp"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight="1"
+            android:layout_weight="1.8"
             android:maxLength="15"
             android:maxEms="15"
             android:text="商品名......"
-            style="@style/bold_20_black"
+            android:textSize="18dp"
+            android:textColor="@color/black"
             >
         </TextView>
         <TextView
