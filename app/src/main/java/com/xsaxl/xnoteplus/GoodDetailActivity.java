@@ -11,6 +11,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
@@ -167,10 +168,11 @@ public class GoodDetailActivity extends AppCompatActivity {
         goodDetail_typeRecycleView.setAdapter(spuAttrAdapter);
         goodDetail_typeRecycleView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
 
-        goodDetail_typeRecycleView.setOnClickListener(new View.OnClickListener() {
+        spuAttrAdapter.setOnClickListener(new SpuAttrAdapter.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Util.showProductParameterDialog(spuAttrs,GoodDetailActivity.this);
+            public void OnClick() {
+                Util.showProductParameterDialog(GoodDetailActivity.this,spuAttrs);
+                Toast.makeText(GoodDetailActivity.this, "点击了", Toast.LENGTH_SHORT).show();
             }
         });
 

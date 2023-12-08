@@ -56,7 +56,7 @@ public class AlertDialogTestActivity extends AppCompatActivity {
 //                builder.setPositiveButton("确定",null);
 //                builder.show();
 
-                Util.showProductParameterDialog(data,AlertDialogTestActivity.this);
+                Util.showProductParameterDialog(AlertDialogTestActivity.this, data);
             }
 
         });

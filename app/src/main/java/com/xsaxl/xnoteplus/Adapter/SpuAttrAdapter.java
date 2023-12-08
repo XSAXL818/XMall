@@ -55,7 +55,25 @@ public class SpuAttrAdapter extends RecyclerView.Adapter<SpuAttrAdapter.ViewHold
             attr_name = itemView.findViewById(R.id.attr_name);
             attr_value = itemView.findViewById(R.id.attr_value);
 
+            attr_image.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if (onClickListener != null){
+                        onClickListener.OnClick();
+                    }
+                }
+            });
+
 
         }
+    }
+
+    private OnClickListener onClickListener;
+    public void setOnClickListener(OnClickListener clickListener) {
+        this.onClickListener = clickListener;
+    }
+    public interface OnClickListener{
+        //回调函数
+        public void OnClick();
     }
 }

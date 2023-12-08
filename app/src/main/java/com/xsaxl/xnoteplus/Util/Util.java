@@ -39,7 +39,7 @@ public class Util {
     }
 
     // 传入SpuAttr的List，显示商品参数的对话框，同时传入上下文
-    public static void showProductParameterDialog(List<SpuAttr> data, Context context){
+    public static void showProductParameterDialog( Context context, List<SpuAttr> data){
 
         AlertDialog.Builder builder = new AlertDialog.Builder( context );
 
