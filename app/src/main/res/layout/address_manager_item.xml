@@ -88,6 +88,7 @@
 
             />
         <Button
+            android:id="@+id/addr_manager_item_delete_button"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="删除"
