@@ -1,13 +1,17 @@
 package com.xsaxl.xnoteplus;
 
+import androidx.activity.result.ActivityResultLauncher;
 import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -15,6 +19,7 @@ import com.xsaxl.xnoteplus.Adapter.AddressItemAdapter;
 import com.xsaxl.xnoteplus.Adapter.SpuAdapter;
 import com.xsaxl.xnoteplus.Adapter.recyclerAdapter;
 import com.xsaxl.xnoteplus.Util.GridSpacingItemDecoration;
+import com.xsaxl.xnoteplus.Util.Util;
 import com.xsaxl.xnoteplus.dao.AddressDao;
 import com.xsaxl.xnoteplus.dao.UserDao;
 import com.xsaxl.xnoteplus.entity.Address;
@@ -35,6 +40,8 @@ public class AddressManagerActivity extends AppCompatActivity {
     private User user;
     private AddressItemAdapter addressItemAdapter;
     private Address defaultAddress;
+
+    private ActivityResultLauncher<Intent> result;
     private ActivityResultContracts.StartActivityForResult activityResult ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -57,6 +64,56 @@ public class AddressManagerActivity extends AppCompatActivity {
 
 
         activityResult = new ActivityResultContracts.StartActivityForResult();
+
+
+        //添加笔记后返回
+        result = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), result -> {
+            if ( result != null && result.getData() != null ) {
+                // 获取返回的数据
+                Intent data = result.getData();
+                // 获取返回的结果note
+                if( result.getResultCode() == RESULT_OK ){// 返回结果正确,增加笔记页面返回结果
+//                    Note note = new Note();
+//                    Bundle bundle1 = data.getExtras();
+//                    note.setNote_title(bundle1.getString("title"));
+//                    note.setNote_content(bundle1.getString("content"));
+//                    note.setNote_time(bundle1.getString("time"));
+//                    note.setDir_id(bundle1.getInt("dir_id"));
+//                    note.setUser_id(bundle1.getInt("user_id"));
+//                    // 设置返回的结果
+//                    Util.showToast(this,"添加成功");
+////                    notes.add(note);
+//                    notes.add(0,note);
+//                    note_recyclerView.getAdapter().notifyDataSetChanged();
+//                    noteDao.insertNote(note);
+                } else if(  result.getResultCode() == Activity.BIND_ADJUST_WITH_ACTIVITY){// 查看笔记页面返回结果
+
+//                    Bundle bundle1 = result.getData().getExtras();
+//                    Util.showToast(this,"从查看笔记页面返回,position:"+bundle1.getInt("position"));
+//
+//                    Note note = notes.get(bundle1.getInt("position"));
+//                    note.setNote_title(bundle1.getString("title"));
+//                    note.setNote_content(bundle1.getString("content"));
+//                    note.setNote_time(bundle1.getString("time"));
+//                    notes.remove(bundle1.getInt("position"));
+//                    notes.add(note);
+//                    note_recyclerView.getAdapter().notifyDataSetChanged();
+//                    noteDao.updateNote(note);
+                }
+            } else {
+                Util.showToast(this,"添加失败");
+            }
+//            if (result != null){
+//                Util.showToast(this,"添加成功1");
+//            } else {
+//                Util.showToast(this,"添加失败1");
+//            }
+//            if( result.getData() != null ){
+//                Util.showToast(this,"添加成功2");
+//            } else {
+//                Util.showToast(this,"添加失败2");
+//            }
+        });
 
 
 //        manager = new LinearLayoutManager(this);
@@ -122,6 +179,13 @@ public class AddressManagerActivity extends AppCompatActivity {
 
         addr_manager_back_button.setOnClickListener(v -> {
             finish();
+        });
+        addr_manager_add_button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                result.launch(new Intent(AddressManagerActivity.this,AddAddressActivity.class));
+            }
         });
 
 

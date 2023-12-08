@@ -55,6 +55,7 @@
             android:layout_height="match_parent">
         </TextView>
         <EditText
+            android:id="@+id/addr_manager_item_name"
             android:layout_width="0dp"
             android:layout_weight="8"
             android:layout_height="50dp"
@@ -81,7 +82,7 @@
             android:layout_height="match_parent">
         </TextView>
         <EditText
-
+            android:id="@+id/addr_manager_item_phone"
             android:layout_width="0dp"
             android:layout_weight="8"
             android:layout_height="50dp"
@@ -111,6 +112,7 @@
             android:layout_height="match_parent">
         </TextView>
         <EditText
+            android:id="@+id/addr_manager_item_city"
             android:layout_width="0dp"
             android:layout_weight="8"
             android:layout_height="50dp"
@@ -137,6 +139,7 @@
             android:layout_height="match_parent">
         </TextView>
         <EditText
+            android:id="@+id/addr_manager_item_detail"
             android:layout_width="0dp"
             android:layout_weight="8"
             android:layout_height="50dp"
@@ -162,6 +165,7 @@
             android:layout_height="match_parent">
         </TextView>
         <CheckBox
+            android:id="@+id/addr_manager_item_set_default"
             android:layout_width="0dp"
             android:layout_weight="1"
             android:layout_height="wrap_content"
@@ -171,6 +175,7 @@
     </LinearLayout>
 
     <Button
+        android:id="@+id/addr_manager_item_save"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:text="保存"

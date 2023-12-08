@@ -10,6 +10,8 @@ import android.widget.TextView;
 public class SettingActivity extends AppCompatActivity {
     private TextView setting_address;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
