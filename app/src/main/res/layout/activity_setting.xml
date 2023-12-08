@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SettingActivity">
+
+    <LinearLayout
+        android:layout_marginLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:orientation="horizontal"
+        >
+        <androidx.constraintlayout.utils.widget.ImageFilterView
+            android:id="@+id/order_detail_item_image"
+            app:round="50dp"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/laoshu"
+            >
+        </androidx.constraintlayout.utils.widget.ImageFilterView>
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:text="账号：15136057793"
+            android:gravity="center|left"
+            >
+
+        </TextView>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_marginLeft="20dp"
+        android:id="@+id/setting_address"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="收货地址"
+        android:gravity="center|left"
+        style="@style/bold_20_black"
+        >
+    </TextView>
+    <TextView
+        android:layout_marginLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="账号安全"
+        android:gravity="center|left"
+        style="@style/bold_20_black"
+        >
+    </TextView>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="切换账号"
+        >
+    </Button>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="退出登录"
+        >
+    </Button>
+
+</LinearLayout>

@@ -16,6 +16,9 @@
         android:theme="@style/Theme.Design.Light.NoActionBar"
         tools:targetApi="31">
         <activity
+            android:name=".SettingActivity"
+            android:exported="false" />
+        <activity
             android:name=".api.TianqiActivity"
             android:exported="false" />
         <activity
@@ -84,8 +87,9 @@
         <activity
             android:name=".api.YuluActivity"
             android:exported="true" />
-        <activity android:name=".ViewActivity"
-            android:exported="true"/>
+        <activity
+            android:name=".ViewActivity"
+            android:exported="true" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
