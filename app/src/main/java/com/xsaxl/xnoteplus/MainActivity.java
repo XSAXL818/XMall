@@ -119,7 +119,8 @@ public class MainActivity extends AppCompatActivity {
 //                bundle.putString("passwd",inputPasswd.getText().toString());
                 intent.putExtras(bundle);
                 MyApplication.getInstance().setUser(user);
-                startActivity(intent);
+                Intent intent2 = new Intent(MainActivity.this,ViewActivity.class);
+                startActivity(intent2);
                 finish();
             }
         });
