@@ -1,5 +1,6 @@
 package com.xsaxl.xnoteplus;
 
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -34,6 +35,7 @@ public class AddressManagerActivity extends AppCompatActivity {
     private User user;
     private AddressItemAdapter addressItemAdapter;
     private Address defaultAddress;
+    private ActivityResultContracts.StartActivityForResult activityResult ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -52,6 +54,9 @@ public class AddressManagerActivity extends AppCompatActivity {
         user.setUser_id(1);
 
         addressList = addressList = addressDao.queryById(user.getUser_id());
+
+
+        activityResult = new ActivityResultContracts.StartActivityForResult();
 
 
 //        manager = new LinearLayoutManager(this);
@@ -92,8 +97,6 @@ public class AddressManagerActivity extends AppCompatActivity {
                     addressDao.update(clickAddress);
                     defaultAddress = clickAddress;
                 }
-
-
                 UpdateRecyclerView();
             }
 
@@ -101,7 +104,8 @@ public class AddressManagerActivity extends AppCompatActivity {
             public void OnEditListener(int postion) {
                 Toast.makeText(AddressManagerActivity.this, "编辑地址", Toast.LENGTH_SHORT).show();
 
-                addressDao.update(addressList.get(postion));
+
+//                addressDao.update(addressList.get(postion));
                 UpdateRecyclerView();
             }
 
