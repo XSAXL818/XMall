@@ -7,6 +7,11 @@ import android.widget.Button;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.xsaxl.xnoteplus.api.LishiActivity;
+import com.xsaxl.xnoteplus.api.ResouActivity;
+import com.xsaxl.xnoteplus.api.XingzuoActivity;
+import com.xsaxl.xnoteplus.api.YuluActivity;
+
 /**
  * API合集
  * 用于调用对应api
@@ -35,7 +40,27 @@ public class APIActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        Button bt11 = findViewById(R.id.bt_shuashipin);
+
+        Button bt3 = findViewById(R.id.bt_xingzuo);
+        bt3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(APIActivity.this, XingzuoActivity.class);
+                intent.putExtra("aa","bb");
+                startActivity(intent);
+            }
+        });
+
+        Button bt4 = findViewById(R.id.bt_lishi);
+        bt4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(APIActivity.this, LishiActivity.class);
+                intent.putExtra("aa","bb");
+                startActivity(intent);
+            }
+        });
+
     }
 
 }

@@ -1,4 +1,4 @@
-package com.xsaxl.xnoteplus;
+package com.xsaxl.xnoteplus.api;
 
 import android.os.Bundle;
 import android.view.View;
@@ -10,6 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
+import com.xsaxl.xnoteplus.R;
 import com.xsaxl.xnoteplus.Util.JsonParse;
 import com.xsaxl.xnoteplus.Util.SSLAgent;
 import java.io.InputStream;
