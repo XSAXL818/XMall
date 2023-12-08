@@ -84,6 +84,8 @@
         <activity
             android:name=".api.YuluActivity"
             android:exported="true" />
+        <activity android:name=".ViewActivity"
+            android:exported="true"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">
