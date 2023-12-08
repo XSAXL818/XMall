@@ -172,7 +172,7 @@ public class GoodDetailActivity extends AppCompatActivity {
             @Override
             public void OnClick() {
                 Util.showProductParameterDialog(GoodDetailActivity.this,spuAttrs);
-                Toast.makeText(GoodDetailActivity.this, "点击了", Toast.LENGTH_SHORT).show();
+                Toast.makeText(GoodDetailActivity.this, "显示产品参数", Toast.LENGTH_SHORT).show();
             }
         });
 

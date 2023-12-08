@@ -36,7 +36,6 @@ public class SpuAttrAdapter extends RecyclerView.Adapter<SpuAttrAdapter.ViewHold
     public void onBindViewHolder(@NonNull SpuAttrAdapter.ViewHolder holder, int position) {
         holder.attr_image.setImageResource(data.get(position).getSpu_attr_image());
         holder.attr_value.setText(data.get(position).getSpu_attr_value());
-        holder.attr_name.setText(data.get(position).getSpu_attr_name());
     }
 
     @Override
@@ -46,13 +45,11 @@ public class SpuAttrAdapter extends RecyclerView.Adapter<SpuAttrAdapter.ViewHold
 
     public class ViewHolder extends RecyclerView.ViewHolder{
         private ImageView attr_image;
-        private TextView attr_name;
         private TextView attr_value;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
             attr_image = itemView.findViewById(R.id.attr_image);
-            attr_name = itemView.findViewById(R.id.attr_name);
             attr_value = itemView.findViewById(R.id.attr_value);
 
             attr_image.setOnClickListener(new View.OnClickListener() {

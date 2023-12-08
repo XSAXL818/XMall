@@ -19,7 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="horizontal"
-        android:layout_weight="12">
+        android:layout_weight="14">
 
         <RadioGroup
             android:layout_width="match_parent"
@@ -31,7 +31,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:background="@drawable/radio_frag1_selector"
-                android:scaleX="0.5"
+                android:scaleX="0.6"
                 android:scaleY="0.8"
                 android:button="@null"
                 android:layout_weight="1">
@@ -42,7 +42,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:background="@drawable/radio_frag2_selector"
-                android:scaleX="0.5"
+                android:scaleX="0.6"
                 android:scaleY="0.8"
                 android:button="@null"
                 android:layout_weight="1">
@@ -53,7 +53,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:background="@drawable/radio_frag3_selector"
-                android:scaleX="0.5"
+                android:scaleX="0.6"
                 android:scaleY="0.8"
                 android:button="@null"
                 android:layout_weight="1">
