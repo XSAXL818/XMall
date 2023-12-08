@@ -2,6 +2,7 @@ package com.xsaxl.xnoteplus;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
@@ -22,7 +23,7 @@ public class SettingActivity extends AppCompatActivity {
         setting_address.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                finish();
+                startActivity(new Intent(SettingActivity.this,AddressManagerActivity.class));
             }
         });
     }
