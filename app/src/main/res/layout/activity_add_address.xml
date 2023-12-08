@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AddAddressActivity">
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:orientation="horizontal"
+        >
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/baseline_arrow_back_24">
+
+        </Button>
+        <TextView
+            android:text="编辑收货地址"
+            style="@style/bold_20_black"
+            android:gravity="center|left"
+            android:layout_marginLeft="10dp"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="match_parent">
+        </TextView>
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="match_parent"
+            android:text="删除"
+            android:background="@drawable/new_button"
+            >
+
+        </Button>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:text="收货人"
+            style="@style/bold_20_black"
+            android:gravity="center|left"
+            android:layout_marginLeft="10dp"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="match_parent">
+        </TextView>
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="8"
+            android:layout_height="50dp"
+            android:background="@drawable/edittext_selector"
+            android:ems="10"
+            android:textSize="22dp"
+            android:layout_gravity="center"
+            android:hint="请输入姓名"
+            ></EditText>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:text="手机号码"
+            style="@style/bold_20_black"
+            android:gravity="center|left"
+            android:layout_marginLeft="10dp"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="match_parent">
+        </TextView>
+        <EditText
+
+            android:layout_width="0dp"
+            android:layout_weight="8"
+            android:layout_height="50dp"
+            android:background="@drawable/edittext_selector"
+            android:ems="10"
+            android:hint="请输入手机号"
+            android:textSize="22dp"
+            android:layout_gravity="center"
+            ></EditText>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:textSize="20dp"
+        android:layout_gravity="center"
+
+        >
+        <TextView
+            android:text="所在地区"
+            style="@style/bold_20_black"
+            android:gravity="center|left"
+            android:layout_marginLeft="10dp"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="match_parent">
+        </TextView>
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="8"
+            android:layout_height="50dp"
+            android:background="@drawable/edittext_selector"
+            android:ems="10"
+            android:hint="请输入所在地区"
+            android:textSize="22dp"
+            android:layout_gravity="center"
+            ></EditText>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:text="详细地址"
+            style="@style/bold_20_black"
+            android:gravity="center|left"
+            android:layout_marginLeft="10dp"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="match_parent">
+        </TextView>
+        <EditText
+            android:layout_width="0dp"
+            android:layout_weight="8"
+            android:layout_height="50dp"
+            android:background="@drawable/edittext_selector"
+            android:ems="10"
+            android:textSize="22dp"
+            android:hint="请输详细地址"
+            ></EditText>
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:text="设置为默认地址"
+            style="@style/bold_20_black"
+            android:gravity="center|left"
+            android:layout_marginLeft="10dp"
+            android:layout_width="0dp"
+            android:layout_weight="3"
+            android:layout_height="match_parent">
+        </TextView>
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            >
+        </CheckBox>
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="保存"
+        android:textSize="22dp"
+        android:background="@drawable/new_button"
+        >
+
+    </Button>
+
+
+
+</LinearLayout>
