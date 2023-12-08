@@ -16,6 +16,7 @@ import androidx.fragment.app.FragmentTransaction;
 import com.xsaxl.xnoteplus.UI.BlankFragment1;
 import com.xsaxl.xnoteplus.UI.BlankFragment2;
 import com.xsaxl.xnoteplus.UI.BlankFragment3;
+import com.xsaxl.xnoteplus.UI.BlankFragment4;
 import com.xsaxl.xnoteplus.dao.UserDao;
 import com.xsaxl.xnoteplus.entity.User;
 import com.xsaxl.xnoteplus.inter.FragCallback1;
@@ -30,7 +31,7 @@ public class HomeActivity extends AppCompatActivity {
     private BlankFragment1 blankFragment1;
     private BlankFragment2 blankFragment2;
     private BlankFragment3 blankFragment3;
-//    private BlankFragment4 blankFragment4;
+    private BlankFragment4 blankFragment4;
     private RadioButton button1;
     private Button button2;
     private Button button3;
@@ -53,6 +54,7 @@ public class HomeActivity extends AppCompatActivity {
         blankFragment1 = new BlankFragment1();
         blankFragment2 = new BlankFragment2();
         blankFragment3 = new BlankFragment3();
+        blankFragment4 = new BlankFragment4();
 
         userDao = MyApplication.getInstance().getXCartDatabase().getUserDao();
 
@@ -93,13 +95,16 @@ public class HomeActivity extends AppCompatActivity {
             replaceFragment(blankFragment3);
         });
 
-        button4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(HomeActivity.this, APIActivity.class);
-                startActivity(intent);
-            }
+        button4.setOnClickListener(v -> {
+            replaceFragment(blankFragment4);
         });
+//        button4.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(HomeActivity.this, APIActivity.class);
+//                startActivity(intent);
+//            }
+//        });
 
 
 

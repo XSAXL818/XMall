@@ -61,7 +61,8 @@ public class ResouActivity extends AppCompatActivity implements View.OnClickList
                         JSONObject jsonData = array.getJSONObject(i);
                         int num = jsonData.optInt("num");
                         String title = jsonData.optString("title");
-                        String hot = jsonData.optString("hot");
+                        String hot1 = jsonData.optString("hot");
+                        String hot = hot1.substring(0,hot1.length()-1);
                         resoulist = resoulist+num+":"+title+"\n\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t"+hot+"\n";
 
                     }
