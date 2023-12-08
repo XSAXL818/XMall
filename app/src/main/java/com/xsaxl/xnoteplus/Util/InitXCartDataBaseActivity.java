@@ -85,6 +85,25 @@ public class InitXCartDataBaseActivity extends AppCompatActivity {
         address2.setAddr_phone("15136057793");
         addressDao.insert(address2);
 
+        Address address3 = new Address();
+        address3.setUser_id(1);
+        address3.setAddr_name("xsaxl");
+        address3.setAddr_region("甘肃省 兰州市 城关区");
+        address3.setAddr_city("兰州大学");
+        address3.setAddr_default(0);
+        address3.setAddr_phone("15136057793");
+        addressDao.insert(address3);
+
+        Address address4 = new Address();
+        address4.setUser_id(1);
+        address4.setAddr_name("xsaxl");
+        address4.setAddr_region("甘肃省 兰州市 城关区");
+        address4.setAddr_city("兰州大学");
+        address4.setAddr_default(0);
+        address4.setAddr_phone("15136057793");
+        addressDao.insert(address4);
+
+
         // brand_id = 1
         Brand brand1 = new Brand();
         brand1.setBrand_name("Vans");

@@ -72,10 +72,11 @@ public class AddressManagerActivity extends AppCompatActivity {
         addressItemAdapter.setCallBack(new AddressItemAdapter.allCheck() {
             @Override
             public void OnSetDefaultListener(boolean isChecked, int postion) {
-                Toast.makeText(AddressManagerActivity.this, "设置默认地址", Toast.LENGTH_SHORT).show();
+
                 Address clickAddress = addressList.get(postion);
                 if ( defaultAddress.compareTo(clickAddress) == 0 || defaultAddress == null  ){
                     Toast.makeText(AddressManagerActivity.this, "已经是默认地址", Toast.LENGTH_SHORT).show();
+                    return;
                 } else {
 
                     // 更新recyclerview
@@ -99,16 +100,18 @@ public class AddressManagerActivity extends AppCompatActivity {
             @Override
             public void OnEditListener(int postion) {
                 Toast.makeText(AddressManagerActivity.this, "编辑地址", Toast.LENGTH_SHORT).show();
+
+                addressDao.update(addressList.get(postion));
                 UpdateRecyclerView();
             }
 
             @Override
             public void OnDeleteListener(int postion) {
                 Toast.makeText(AddressManagerActivity.this, "删除地址", Toast.LENGTH_SHORT).show();
-                UpdateRecyclerView();
 
                 addressDao.delete(addressList.get(postion));
-
+                addressList.remove(postion);
+                UpdateRecyclerView();
             }
         });
 
