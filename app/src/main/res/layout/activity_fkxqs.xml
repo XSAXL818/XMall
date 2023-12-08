@@ -4,26 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".api.ResouActivity"
-    android:orientation="vertical"
-    android:background="@color/grey">
+    tools:context=".api.FkxqsActivity"
+    android:orientation="vertical">
     <Button
+        android:id="@+id/bt8"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:text="热搜"
-        android:gravity="center"
-        android:textSize="20dp"
-        android:id="@+id/bt3"
-        android:textColor="@color/grey"
-        android:background="@drawable/new_button2"/>
+        android:background="@drawable/new_button2"
+        android:text="获取疯狂星期四文案"
+        android:textColor="@color/white"
+        android:textSize="20dp" />
+
     <TextView
+        android:id="@+id/tv_fkxqs"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:textSize="20dp"
-        android:layout_marginTop="20dp"
         android:layout_marginLeft="10dp"
-        android:id="@+id/tv31"
+        android:layout_marginTop="30dp"
         android:text="点击上方按钮"
-        android:textColor="@color/black"/>
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
 </LinearLayout>

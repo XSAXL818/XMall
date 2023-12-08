@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".api.YuanshenActivity"
+    android:orientation="vertical">
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bt6"
+        android:text="获取原神图片"
+        android:textSize="20dp"
+        android:background="@drawable/new_button2"
+        android:textColor="@color/white"
+        android:layout_marginTop="10dp"/>
+    <ImageView
+        android:layout_width="400dp"
+        android:layout_height="400dp"
+        android:id="@+id/image_yuanshen"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="5dp"/>
+</LinearLayout>

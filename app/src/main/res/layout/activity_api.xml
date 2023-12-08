@@ -6,109 +6,115 @@
     android:layout_height="match_parent"
     tools:context=".APIActivity"
     android:orientation="vertical"
-    android:background="@color/grey">
+    android:background="#FFCB97">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/bt_yulu"
+            android:layout_width="0dp"
+            android:layout_height="170dp"
+            android:layout_weight="1"
+            android:text="语录/答案之书"
+            android:textSize="25dp"
+            android:textColor="@color/white"
+            android:background="#FF9B42"
+            android:layout_marginTop="0dp"/>
 
-    <Button
-        android:id="@+id/bt_yulu"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="语录/答案之书"
-        android:textSize="20dp"
-        android:textColor="@color/white"
-        android:background="#FF9B42"
-        android:layout_marginTop="5dp"/>
+        <Button
+            android:id="@+id/bt_resou"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="170dp"
+            android:text="微博热搜"
+            android:textSize="25dp"
+            android:textColor="@color/white"
+            android:background="#FF8920"
+            android:layout_marginTop="0dp"/>
+    </LinearLayout>
 
-    <Button
-        android:id="@+id/bt_resou"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="微博热搜"
-        android:textSize="20dp"
-        android:textColor="@color/white"
-        android:background="#FF9B42"
-        android:layout_marginTop="5dp"/>
 
-    <Button
-        android:id="@+id/bt_xingzuo"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="星座运势"
-        android:textSize="20dp"
-        android:textColor="@color/white"
-        android:background="#FF9B42"
-        android:layout_marginTop="5dp"/>
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/bt_xingzuo"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="170dp"
+            android:text="星座运势"
+            android:textSize="25dp"
+            android:textColor="@color/white"
+            android:background="#FF8920"
+            android:layout_marginTop="5dp"/>
 
-    <Button
-        android:id="@+id/bt_lishi"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="历史上的今天"
-        android:textSize="20dp"
-        android:textColor="@color/white"
-        android:background="#FF9B42"
-        android:layout_marginTop="5dp"/>
+        <Button
+            android:id="@+id/bt_lishi"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="170dp"
+            android:text="历史上的今天"
+            android:textSize="25dp"
+            android:textColor="@color/white"
+            android:background="#FF9B42"
+            android:layout_marginTop="5dp"/>
+    </LinearLayout>
 
-    <Button
-        android:id="@+id/bt_fkxqs"
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="疯狂星期四文案"
-        android:textSize="20dp"
-        android:textColor="@color/white"
-        android:background="#FF9B42"
-        android:layout_marginTop="5dp"/>
-    <Button
-        android:id="@+id/bt_kanshijie"
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/bt_fkxqs"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="170dp"
+            android:text="疯狂星期四文案"
+            android:textSize="25dp"
+            android:textColor="@color/white"
+            android:background="#FF9B42"
+            android:layout_marginTop="5dp"/>
+        <Button
+            android:id="@+id/bt_kanshijie"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="170dp"
+            android:text="表情包"
+            android:textSize="25dp"
+            android:textColor="@color/white"
+            android:background="#FF8920"
+            android:layout_marginTop="5dp"/>
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="每日60s看世界"
-        android:textSize="20dp"
-        android:textColor="@color/white"
-        android:background="#FF9B42"
-        android:layout_marginTop="5dp"/>
-    <Button
-        android:id="@+id/bt_yuanshen"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="原神图片"
-        android:textSize="20dp"
-        android:textColor="@color/white"
-        android:background="#FF9B42"
-        android:layout_marginTop="5dp"/>
-    <Button
-        android:id="@+id/bt_bizhi"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="热门壁纸"
-        android:textSize="20dp"
-        android:textColor="@color/white"
-        android:background="#FF9B42"
-        android:layout_marginTop="5dp"/>
-    <Button
-        android:id="@+id/bt_tianqi"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="天气查询"
-        android:textSize="20dp"
-        android:textColor="@color/white"
-        android:background="#FF9B42"
-        android:layout_marginTop="5dp"/>
-    <Button
-        android:id="@+id/bt_biaoqing"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="表情包"
-        android:textSize="20dp"
-        android:textColor="@color/white"
-        android:background="#FF9B42"
-        android:layout_marginTop="5dp"/>
-    <Button
-        android:id="@+id/bt_shuashipin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="刷视频"
-        android:textSize="20dp"
-        android:textColor="@color/white"
-        android:background="#FF9B42"
-        android:layout_marginTop="5dp"/>
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/bt_yuanshen"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="170dp"
+            android:text="原神图片"
+            android:textSize="25dp"
+            android:textColor="@color/white"
+            android:background="#FF8920"
+            android:layout_marginTop="5dp"/>
+        <Button
+            android:id="@+id/bt_tianqi"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="170dp"
+            android:text="天气查询"
+            android:textSize="25dp"
+            android:textColor="@color/white"
+            android:background="#FF9B42"
+            android:layout_marginTop="5dp"/>
+    </LinearLayout>
+
+
+
 </LinearLayout>

@@ -16,6 +16,24 @@
         android:theme="@style/Theme.Design.Light.NoActionBar"
         tools:targetApi="31">
         <activity
+            android:name=".api.TianqiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".api.FkxqsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".api.KanshijieActivity"
+            android:exported="false" />
+        <activity
+            android:name=".api.YuanshenActivity"
+            android:exported="false" />
+        <activity
+            android:name=".api.LishiActivity"
+            android:exported="false" />
+        <activity
+            android:name=".api.XingzuoActivity"
+            android:exported="false" />
+        <activity
             android:name=".Test.AlertDialogTestActivity"
             android:exported="true" />
         <activity
@@ -61,10 +79,10 @@
             android:name=".APIActivity"
             android:exported="true" />
         <activity
-            android:name=".ResouActivity"
+            android:name=".api.ResouActivity"
             android:exported="true" />
         <activity
-            android:name=".YuluActivity"
+            android:name=".api.YuluActivity"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
