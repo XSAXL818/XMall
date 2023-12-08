@@ -59,42 +59,19 @@
                 android:layout_weight="1">
 
             </RadioButton>
+            <RadioButton
+                android:id="@+id/button4"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@drawable/yule"
+                android:scaleX="0.5"
+                android:scaleY="0.8"
+                android:button="@null"
+                android:layout_weight="1">
 
+            </RadioButton>
 
         </RadioGroup>
-
-
-<!--        <Button-->
-<!--            android:textColor="@color/black"-->
-<!--            android:id="@+id/button1"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_weight="1"-->
-<!--            android:text="首页"-->
-<!--            android:background="@color/white"-->
-<!--            android:layout_height="match_parent">-->
-<!--        </Button>-->
-<!--        <Button-->
-<!--            android:textColor="@color/black"-->
-<!--            android:id="@+id/button2"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="match_parent"-->
-<!--            android:layout_weight="1"-->
-<!--            android:text="购物车"-->
-<!--            android:background="@color/white"-->
-<!--            >-->
-<!--        </Button>-->
-<!--        <Button-->
-<!--            android:textColor="@color/black"-->
-<!--            android:id="@+id/button3"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="match_parent"-->
-<!--            android:text="我的"-->
-<!--            android:layout_weight="1"-->
-<!--            android:background="@color/white"-->
-<!--            >-->
-<!--        </Button>-->
-
-
 
     </LinearLayout>
 
