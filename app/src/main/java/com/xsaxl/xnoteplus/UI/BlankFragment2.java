@@ -27,10 +27,12 @@ import com.xsaxl.xnoteplus.MyApplication;
 import com.xsaxl.xnoteplus.R;
 import com.xsaxl.xnoteplus.Store;
 import com.xsaxl.xnoteplus.Util.MyList;
+import com.xsaxl.xnoteplus.dao.AddressDao;
 import com.xsaxl.xnoteplus.dao.BrandDao;
 import com.xsaxl.xnoteplus.dao.CartDao;
 import com.xsaxl.xnoteplus.dao.OrderDao;
 import com.xsaxl.xnoteplus.dao.SkuDao;
+import com.xsaxl.xnoteplus.entity.Address;
 import com.xsaxl.xnoteplus.entity.Brand;
 import com.xsaxl.xnoteplus.entity.Cart;
 import com.xsaxl.xnoteplus.entity.Order;
@@ -52,6 +54,8 @@ public class BlankFragment2 extends Fragment {
     private Button btn_buy;
     private CartDao cartDao;
     private BrandDao brandDao;
+    private TextView cart_address;
+    private AddressDao addressDao;
 
 
 
@@ -89,6 +93,9 @@ public class BlankFragment2 extends Fragment {
         cart_money = root.findViewById(R.id.cart_money);
         cartDao = MyApplication.getInstance().getXCartDatabase().getCartDao();
         brandDao = MyApplication.getInstance().getXCartDatabase().getBrandDao();
+        cart_address = root.findViewById(R.id.cart_address);
+
+        addressDao = MyApplication.getInstance().getXCartDatabase().getAddressDao();
 
         // 该用户的购物车的所有店铺
         List<Integer> integers = cartDao.queryBrandIdByUserId(MyApplication.getInstance().getUser().getUser_id());
@@ -123,6 +130,8 @@ public class BlankFragment2 extends Fragment {
             stores.add(store);
         }
 
+        Address address = addressDao.queryByDefault(MyApplication.getInstance().getUser().getUser_id());
+        cart_address.setText( address.getAddr_region() +" " + address.getAddr_city() );
 
 //        stores = new ArrayList<Store>();
         goodMoney = 0;

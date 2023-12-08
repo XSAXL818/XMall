@@ -22,9 +22,10 @@
         android:orientation="horizontal"
         android:background="@color/white"
         >
-        <ImageView
+        <androidx.constraintlayout.utils.widget.ImageFilterView
             android:id="@+id/imageView2"
             android:layout_width="0dp"
+            app:round="20dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:background="@mipmap/laoshu"

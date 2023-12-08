@@ -73,19 +73,6 @@ public class AddressManagerActivity extends AppCompatActivity {
                 Intent data = result.getData();
                 // 获取返回的结果note
                 if( result.getResultCode() == RESULT_OK ){// 返回结果正确,增加笔记页面返回结果
-//                    Note note = new Note();
-//                    Bundle bundle1 = data.getExtras();
-//                    note.setNote_title(bundle1.getString("title"));
-//                    note.setNote_content(bundle1.getString("content"));
-//                    note.setNote_time(bundle1.getString("time"));
-//                    note.setDir_id(bundle1.getInt("dir_id"));
-//                    note.setUser_id(bundle1.getInt("user_id"));
-//                    // 设置返回的结果
-//                    Util.showToast(this,"添加成功");
-////                    notes.add(note);
-//                    notes.add(0,note);
-//                    note_recyclerView.getAdapter().notifyDataSetChanged();
-//                    noteDao.insertNote(note);
                     Address address = new Address();
                     Bundle bundle1 = data.getExtras();
                     address.setAddr_default(bundle1.getInt("default"));
