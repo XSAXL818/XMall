@@ -38,7 +38,7 @@ public class AddressItemAdapter extends RecyclerView.Adapter<AddressItemAdapter.
         holder.addr_manager_item_name_image.setText(data.get(position).getAddr_name().substring(0,1));
         holder.addr_manager_item_name_phone.setText(data.get(position).getAddr_name()+" "+data.get(position).getAddr_phone());
         holder.addr_manager_item_address.setText(data.get(position).getAddr_region()+" "+ data.get(position).getAddr_city());
-
+        holder.addr_manager_item_set_default.setChecked(data.get(position).getAddr_default()==1?true:false);
         holder.addr_manager_item_set_default.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {

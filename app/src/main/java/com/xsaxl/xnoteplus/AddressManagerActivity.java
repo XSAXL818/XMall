@@ -47,7 +47,9 @@ public class AddressManagerActivity extends AppCompatActivity {
         addressDao = MyApplication.getInstance().getXCartDatabase().getAddressDao();
         userDao = MyApplication.getInstance().getXCartDatabase().getUserDao();
 
-        user = MyApplication.getInstance().getUser();
+//        user = MyApplication.getInstance().getUser();
+        user = new User();
+        user.setUser_id(1);
 
         addressList = addressList = addressDao.queryById(user.getUser_id());
 
@@ -69,23 +71,43 @@ public class AddressManagerActivity extends AppCompatActivity {
 
         addressItemAdapter.setCallBack(new AddressItemAdapter.allCheck() {
             @Override
-            public void OnSetDefaultListener(boolean isChecked, int childpostion) {
+            public void OnSetDefaultListener(boolean isChecked, int postion) {
                 Toast.makeText(AddressManagerActivity.this, "设置默认地址", Toast.LENGTH_SHORT).show();
+                Address clickAddress = addressList.get(postion);
+                if ( defaultAddress.compareTo(clickAddress) == 0 || defaultAddress == null  ){
+                    Toast.makeText(AddressManagerActivity.this, "已经是默认地址", Toast.LENGTH_SHORT).show();
+                } else {
+
+                    // 更新recyclerview
+                    for (int i = 0; i < addressList.size(); i++) {
+                        addressList.get(i).setAddr_default(0);
+                    }
+                    addressList.get(postion).setAddr_default(1);
+
+                    // 更新数据库
+                    defaultAddress.setAddr_default(0);
+                    clickAddress.setAddr_default(1);
+                    addressDao.update(defaultAddress);
+                    addressDao.update(clickAddress);
+                    defaultAddress = clickAddress;
+                }
+
+
                 UpdateRecyclerView();
             }
 
             @Override
-            public void OnEditListener(int childpostion) {
+            public void OnEditListener(int postion) {
                 Toast.makeText(AddressManagerActivity.this, "编辑地址", Toast.LENGTH_SHORT).show();
                 UpdateRecyclerView();
             }
 
             @Override
-            public void OnDeleteListener(int childpostion) {
+            public void OnDeleteListener(int postion) {
                 Toast.makeText(AddressManagerActivity.this, "删除地址", Toast.LENGTH_SHORT).show();
                 UpdateRecyclerView();
 
-                addressDao.delete(addressList.get(childpostion));
+                addressDao.delete(addressList.get(postion));
 
             }
         });
@@ -101,7 +123,7 @@ public class AddressManagerActivity extends AppCompatActivity {
         Handler handler = new Handler();
         final Runnable r = new Runnable() {
             public void run() {
-                adapter.notifyDataSetChanged();
+                addressItemAdapter.notifyDataSetChanged();
             }
         };
         handler.post(r);

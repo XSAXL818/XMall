@@ -81,7 +81,7 @@ public class InitXCartDataBaseActivity extends AppCompatActivity {
         address2.setAddr_name("xsaxl");
         address2.setAddr_region("甘肃省 兰州市 城关区");
         address2.setAddr_city("兰州大学");
-        address2.setAddr_default(1);
+        address2.setAddr_default(0);
         address2.setAddr_phone("15136057793");
         addressDao.insert(address2);
 
