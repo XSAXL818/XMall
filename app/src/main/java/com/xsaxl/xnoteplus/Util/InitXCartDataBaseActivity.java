@@ -69,7 +69,7 @@ public class InitXCartDataBaseActivity extends AppCompatActivity {
         // addr_id = 1
         Address address1 = new Address();
         address1.setUser_id(1);
-        address1.setAddr_name("邹炒饭酱");
+        address1.setAddr_name("XSAXL");
         address1.setAddr_region("甘肃省 兰州市 安宁区");
         address1.setAddr_city("西北师范大学");
         address1.setAddr_default(1);
@@ -78,12 +78,31 @@ public class InitXCartDataBaseActivity extends AppCompatActivity {
         // addr_id = 2
         Address address2 = new Address();
         address2.setUser_id(1);
-        address2.setAddr_name("邹炒饭酱");
+        address2.setAddr_name("xsaxl");
         address2.setAddr_region("甘肃省 兰州市 城关区");
         address2.setAddr_city("兰州大学");
-        address2.setAddr_default(1);
+        address2.setAddr_default(0);
         address2.setAddr_phone("15136057793");
         addressDao.insert(address2);
+
+        Address address3 = new Address();
+        address3.setUser_id(1);
+        address3.setAddr_name("xsaxl");
+        address3.setAddr_region("甘肃省 兰州市 城关区");
+        address3.setAddr_city("兰州大学");
+        address3.setAddr_default(0);
+        address3.setAddr_phone("15136057793");
+        addressDao.insert(address3);
+
+        Address address4 = new Address();
+        address4.setUser_id(1);
+        address4.setAddr_name("xsaxl");
+        address4.setAddr_region("甘肃省 兰州市 城关区");
+        address4.setAddr_city("兰州大学");
+        address4.setAddr_default(0);
+        address4.setAddr_phone("15136057793");
+        addressDao.insert(address4);
+
 
         // brand_id = 1
         Brand brand1 = new Brand();

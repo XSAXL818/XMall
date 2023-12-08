@@ -25,5 +25,8 @@ public interface AddressDao {
     List<Address> query();
 
     @Query("SELECT * FROM address WHERE addr_default = :addr_default")
-    Address querycCityByDefault(int addr_default);
+    Address queryByDefault(int addr_default);
+
+    @Query("SELECT * FROM address WHERE user_id = :userId")
+    List<Address> queryById(int userId);
 }

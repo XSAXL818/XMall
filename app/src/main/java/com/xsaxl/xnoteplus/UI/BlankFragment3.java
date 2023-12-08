@@ -6,6 +6,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -14,6 +15,7 @@ import androidx.fragment.app.Fragment;
 import com.xsaxl.xnoteplus.MyApplication;
 import com.xsaxl.xnoteplus.OrderHomeActivity;
 import com.xsaxl.xnoteplus.R;
+import com.xsaxl.xnoteplus.SettingActivity;
 import com.xsaxl.xnoteplus.Util.Util;
 import com.xsaxl.xnoteplus.dao.UserDao;
 import com.xsaxl.xnoteplus.entity.User;
@@ -31,6 +33,7 @@ public class BlankFragment3 extends Fragment {
     private Button order_button4;
     private Button order_button5;
     private Button order_button6;
+    private ImageButton imageButton;
     private TextView tv_info;
     private User user;
     private UserDao userDao;
@@ -63,6 +66,7 @@ public class BlankFragment3 extends Fragment {
         order_button4 = root.findViewById(R.id.order_button4);
         order_button5 = root.findViewById(R.id.order_button5);
         order_button6 = root.findViewById(R.id.order_button6);
+        imageButton = root.findViewById(R.id.imageButton);
         textView2 = root.findViewById(R.id.textView2);
         tv_info = root.findViewById(R.id.tv_info);
         userDao = MyApplication.getInstance().getXCartDatabase().getUserDao();
@@ -121,7 +125,12 @@ public class BlankFragment3 extends Fragment {
                 startActivity(intent);
             }
         });
-
+        imageButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getActivity(), SettingActivity.class));
+            }
+        });
 
         return root;
     }

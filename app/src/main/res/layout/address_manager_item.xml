@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="120dp"
     android:orientation="vertical"
+    android:background="@color/grey"
     >
     <LinearLayout
         android:layout_width="match_parent"
@@ -88,6 +89,7 @@
 
             />
         <Button
+            android:id="@+id/addr_manager_item_delete_button"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="删除"

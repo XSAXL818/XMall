@@ -4,7 +4,7 @@ import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 @Entity
-public class Address {
+public class Address implements Comparable<Address> {
     @PrimaryKey(autoGenerate = true)
     private int addr_id;
     private int user_id;
@@ -80,5 +80,14 @@ public class Address {
 
     public void setAddr_default(int addr_default) {
         this.addr_default = addr_default;
+    }
+
+
+    @Override
+    public int compareTo(Address o) {
+        if( this.addr_id != o.addr_id ){
+            return 1;
+        }
+        return 0;
     }
 }

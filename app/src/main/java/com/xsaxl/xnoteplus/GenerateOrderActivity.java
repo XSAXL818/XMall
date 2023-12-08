@@ -119,7 +119,7 @@ public class GenerateOrderActivity extends AppCompatActivity {
         }
 
         generate_order_price.setText("价格：￥"+money);
-        Address address = addressDao.querycCityByDefault( 1 );
+        Address address = addressDao.queryByDefault( 1 );
         String addr = address.getAddr_name() +" " + address.getAddr_phone() + " " + address.getAddr_region() + " " + address.getAddr_city();
         generate_order_addr.setText("收货地址："+addr);
 
