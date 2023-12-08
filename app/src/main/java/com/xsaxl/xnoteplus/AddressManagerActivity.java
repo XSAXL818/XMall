@@ -86,6 +86,20 @@ public class AddressManagerActivity extends AppCompatActivity {
 //                    notes.add(0,note);
 //                    note_recyclerView.getAdapter().notifyDataSetChanged();
 //                    noteDao.insertNote(note);
+                    Address address = new Address();
+                    Bundle bundle1 = data.getExtras();
+                    address.setAddr_default(bundle1.getInt("default"));
+                    address.setAddr_city(bundle1.getString("city"));
+                    address.setAddr_region(bundle1.getString("region"));
+                    address.setAddr_name(bundle1.getString("name"));
+                    address.setAddr_phone(bundle1.getString("phone"));
+                    address.setUser_id(user.getUser_id());
+
+                    addressDao.insert(address);
+                    addressList.add(address);
+                    UpdateRecyclerView();
+
+
                 } else if(  result.getResultCode() == Activity.BIND_ADJUST_WITH_ACTIVITY){// 查看笔记页面返回结果
 
 //                    Bundle bundle1 = result.getData().getExtras();
