@@ -43,10 +43,7 @@ public class YuluActivity extends AppCompatActivity implements View.OnClickListe
             Answer();
         }else if (view.getId() == R.id.bt2){
             Content();
-        }else if (view.getId() == R.id.bt3){
-            Resou();
         }
-
     }
 
     public void Answer() throws RuntimeException {
@@ -110,45 +107,6 @@ public class YuluActivity extends AppCompatActivity implements View.OnClickListe
 
                     t2.setText(en);
                     t1.setText(zh);
-                } catch (Exception e){
-                    e.printStackTrace();
-                }
-
-            }
-
-        }).start();
-    }
-    public void Resou() throws RuntimeException {
-
-        new Thread(new Runnable(){
-            @Override
-            public void run() {
-                try {
-                    SSLAgent.getInstance().trustAllHttpsCertificates();
-                    URL url = new URL("https://api.andeer.top/API/hot_wb.php");
-                    HttpsURLConnection connection = (HttpsURLConnection) url.openConnection();
-                    connection.setRequestMethod("GET");
-                    connection.setConnectTimeout(5000);
-                    InputStream in = connection.getInputStream();
-                    JsonParse jsonParse = new JsonParse();
-                    String json = jsonParse.read(in);
-
-                    JSONObject jsonObj = new JSONObject(json);
-                    String data = jsonObj.optString("data");
-
-                    String resoulist="";
-                    JSONArray array = new JSONArray(data);
-                    for (int i=0;i<array.length();i++){
-                        JSONObject jsonData = array.getJSONObject(i);
-                        int num = jsonData.optInt("num");
-                        String title = jsonData.optString("title");
-                        resoulist = resoulist+num+":"+title+"\n";
-
-                    }
-
-                    TextView t2 = findViewById(R.id.tv31);
-
-                    t2.setText(resoulist);
                 } catch (Exception e){
                     e.printStackTrace();
                 }

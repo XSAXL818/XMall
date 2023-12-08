@@ -81,7 +81,9 @@
         android:layout_marginTop="105dp"
         android:text="登录"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/remember" />
+        app:layout_constraintTop_toTopOf="@+id/remember"
+        android:background="@drawable/new_button3"
+        android:textSize="20dp"/>
 
     <Button
         android:id="@+id/login_cancel"
@@ -91,7 +93,9 @@
         android:text="取消"
         app:layout_constraintBottom_toBottomOf="@+id/login_ensure"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/login_ensure" />
+        app:layout_constraintTop_toTopOf="@+id/login_ensure"
+        android:background="@drawable/new_button3"
+        android:textSize="20dp"/>
 
     <CheckBox
         android:id="@+id/remember"
