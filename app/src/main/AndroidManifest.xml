@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-
     <!-- if you want to load images from the internet -->
     <uses-permission android:name="android.permission.INTERNET" />
-
 
     <application
         android:name=".MyApplication"
@@ -17,6 +15,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Design.Light.NoActionBar"
         tools:targetApi="31">
+        <activity
+            android:name=".Test.AlertDialogTestActivity"
+            android:exported="true" />
         <activity
             android:name=".Test.BannerActivity"
             android:exported="true" />
