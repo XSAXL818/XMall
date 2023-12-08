@@ -17,6 +17,7 @@ import com.bumptech.glide.load.resource.bitmap.RoundedCorners;
 import com.bumptech.glide.request.RequestOptions;
 import com.xsaxl.xnoteplus.Adapter.GoodDetailImageAdapter;
 import com.xsaxl.xnoteplus.Adapter.SpuAttrAdapter;
+import com.xsaxl.xnoteplus.Util.Util;
 import com.xsaxl.xnoteplus.dao.ImageDao;
 import com.xsaxl.xnoteplus.dao.SpuAttrDao;
 import com.xsaxl.xnoteplus.dao.SpuDao;
@@ -161,10 +162,17 @@ public class GoodDetailActivity extends AppCompatActivity {
 
         SpuAttrAdapter spuAttrAdapter = new SpuAttrAdapter(spuAttrs,this);
 
+
         // 文件夹RecyclerView
         goodDetail_typeRecycleView.setAdapter(spuAttrAdapter);
         goodDetail_typeRecycleView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false));
 
+        goodDetail_typeRecycleView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Util.showProductParameterDialog(spuAttrs,GoodDetailActivity.this);
+            }
+        });
 
 
         goodDetail_addSCart.setOnClickListener(new View.OnClickListener() {

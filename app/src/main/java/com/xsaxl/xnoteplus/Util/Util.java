@@ -12,6 +12,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.xsaxl.xnoteplus.MyApplication;
 import com.xsaxl.xnoteplus.R;
 import com.xsaxl.xnoteplus.Test.AlertDialogTestActivity;
 import com.xsaxl.xnoteplus.Test.AlertDialogTestAdapter;
@@ -55,6 +56,14 @@ public class Util {
 
         builder.setPositiveButton("确定",null);
         builder.show();
+    }
+
+    // 根据时间生成唯一的订单号,时间+用户手机号后四位
+    public static String getOrderNumber(){
+        String orderNumber = "";
+        orderNumber = DateFormat.format("yyyyMMddHHmmss", new Date()).toString();
+        orderNumber += MyApplication.getInstance().getUser().getUser_phone().substring(7);
+        return orderNumber;
     }
 
 }
